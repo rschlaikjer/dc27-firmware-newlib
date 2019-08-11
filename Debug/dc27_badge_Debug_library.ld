@@ -8,8 +8,15 @@
  * MCUXpresso IDE v10.2.1 [Build 795] [2018-07-25]  on Jul 12, 2019 1:35:10 PM
  */
 
+/*
 GROUP (
   "libcr_nohost.a"
   "libcr_c.a"
   "libcr_eabihelpers.a"
 )
+*/
+GROUP(
+    "libgcc.a"
+    "libc_nano.a"
+    "libm.a"
+    )
