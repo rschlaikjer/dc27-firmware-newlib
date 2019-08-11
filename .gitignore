@@ -1,0 +1,3 @@
+*.o
+*.d
+Debug/dc27_badge.axf
