@@ -1782,7 +1782,7 @@ void DC27_InteractiveMode(void) {
         dc27_invalid_cmd();
       else {
         uint32_t freq = 0, duration = 0;
-        sscanf((char *)(inputString + 2), "%d %d", &freq, &duration);
+        sscanf((char *)(inputString + 2), "%ld %ld", &freq, &duration);
         KL_Piezo(freq, duration, 50);
       }
       break;
