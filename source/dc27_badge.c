@@ -65,6 +65,7 @@
 #include "peripherals.h"
 #include "pin_mux.h"
 #include <stdio.h>
+#include <inttypes.h>
 
 #include "LPBroadcast_NXH_DC27.eep.h" // Pre-compiled firmware blob for NXH2261 (loaded during power-up)
 
@@ -1782,7 +1783,7 @@ void DC27_InteractiveMode(void) {
         dc27_invalid_cmd();
       else {
         uint32_t freq = 0, duration = 0;
-        sscanf((char *)(inputString + 2), "%ld %ld", &freq, &duration);
+        sscanf((char *)(inputString + 2), "%" SCNu32 ", %" SCNu32, &freq, &duration);
         KL_Piezo(freq, duration, 50);
       }
       break;
